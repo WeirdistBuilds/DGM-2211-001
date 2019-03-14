@@ -1,0 +1,31 @@
+	Create a character rig for the included character using IK systems for the limbs. Each system must include a control for the IK handle, a base control for the root joint, and a pole vector control. The remaining portions of the rig (spine, hip, head, hands, fingers, transform, cog, etc.) will be rigged using standard FK systems.
+	Incorporate the IK systems into the rig and ensure that all systems function properly together. Conform to the naming and organization conventions that have been established.
+	Upon completion of the rig, create a walk or run cycle using the principles of animation presented in Animator's Survival Kit. Use the text and references in establishing the key poses of the animation. Apply problem-solving in creating the rig and creativity in the animation.
+Grading will be based on completion, competency, problem-solving, and accuracy.
+	Upload the completed animation to Sketchfab, or to YouTube as a Playblast, and submit the URL and the character rig Maya file (.ma) to the assignment.
+
+https://www.youtube.com/watch?v=simoEUYXbYs&t=434s
+
+Transform-COG-SpineJnt
+		-Chest, arms, neck
+COG-Root-Hips
+	-Legs, Fannypack, etc
+COG-IKArmMasterCtrlGrps
+	-BaseCtrl, PV Ctrl, IK Ctrl-IKHandle(hidden)
+COG-IKLegMasterCtrlGrps
+	-BaseCtrl, PV Ctrl, IK Ctrl-IKHandle(hidden)
+
+
+Constraints take priority over hierarchy
+
+SO Constraints will go from Spine or Root Jnt to the IK Base Ctrl Groups
+
+
+If you mirror joints, do behavioural flip and mirror across if |yx_, you'll do yz.
+
+Orienting joints
+	x moving to next joint, or maybe adjusted depending on situation.
+	z acts as a PIN for the joint, if rotate forward is important, forward must be positive z
+	matching tip joints to rotation can also be done by zeroing out joint orient values in the attribute editor (or wherever)
+
+if x is down joint and z points world down, y is going the direction positive z will rotate.

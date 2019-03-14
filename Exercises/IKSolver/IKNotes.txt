@@ -15,8 +15,17 @@ At this point, you can orient the controls and freeze them .
 
 Constrain Controls
 	Arm_PV_ctrl gets a pole vector constraint to the IK Handle
+		This control can be oriented correctly by matching transformations to the elbow.
 	Shoulder_IK_ctrl to the Shoulder (or root) joint
 	Make the Arm_IK_Handle a child of the Arm_IK_ctrl
+
+For Wrist
+	Grp-IKCtrl-IKHandle(hidden)
+For Elbow
+	CtrlGrp(orient to elbow)-OrientGrp(moved away from elbow in one value)-Ctrl
+
+Rotate elbow to see which value changes in which sign = preferred angle
+If you give the control an ORIENT constraint on the hand, it will allow the ik control to also rotate the wrist
 
 
 Make Granddaddy Controls
