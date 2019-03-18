@@ -18,7 +18,7 @@ COG-IKLegMasterCtrlGrps
 
 Constraints take priority over hierarchy
 
-SO Constraints will go from Spine or Root Jnt to the IK Base Ctrl Groups
+So, Constraints will go from Spine or Root Jnt to the IK Base Ctrl Groups
 
 
 If you mirror joints, do behavioural flip and mirror across if |yx_, you'll do yz.
@@ -26,6 +26,6 @@ If you mirror joints, do behavioural flip and mirror across if |yx_, you'll do y
 Orienting joints
 	x moving to next joint, or maybe adjusted depending on situation.
 	z acts as a PIN for the joint, if rotate forward is important, forward must be positive z
-	matching tip joints to rotation can also be done by zeroing out joint orient values in the attribute editor (or wherever)
+	matching tip joints to rotation can also be done by zeroing out joint orient values in the attribute editor
 
 if x is down joint and z points world down, y is going the direction positive z will rotate.
